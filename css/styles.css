@@ -1,0 +1,74 @@
+:root {
+  --button-color: #ffffff;
+  --bg-color: #f73122;
+  --txt-color: #00000;
+}
+
+body {
+background-color: var(--bg-color);
+}
+
+.pkbutton {
+border: none;
+text-decoration: none;
+color: var(--txt-color);
+background-color: var(--button-color);
+font-size: 16px;
+margin: 10px;
+padding: 10px;
+border-radius: 3px;
+transition-duration: 0.2s;
+transition-property: opacity;
+}
+
+.pkbutton:hover,
+.pkbutton:focus {
+cursor: pointer;
+opacity: 0.8;
+}
+
+#modal-container{
+  display: none;
+}
+
+#modal-container.is-visible{
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /*to show it above other content*/
+  z-index: 999;
+  /*to allow scrolling if the screen is not high enough*/
+  display: grid;
+  text-align: center;
+}
+
+.modal{
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.modal-close{
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: #000;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.modal h1:first-letter{
+  text-transform: uppercase;
+}
